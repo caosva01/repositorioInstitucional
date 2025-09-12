@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentRepo</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: white;
+    min-height: 100vh;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 90px;   /* Tamaño reducido del logo */
+  height: auto;
+}
+/*Menu*/
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: bold;
+}
+nav a:hover {
+    color: rgb(195, 42, 42);
+}
+.acceder {
+    padding: 8px 18px;
+    background: rgb(0, 24, 244);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+
+}
+.buscador{
+    justify-content: center;
+    margin: 80px;
+    width: 70%;
+    display: flex;
+
+}
+.buscador input[type="text"]{
+    flex: 1;
+    padding: 15 px;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    font-size: 18px;
+}
+.buscador button{
+    padding: 15px 25px;
+    border: none;
+    background: rgb(0, 24, 244);
+    color: white;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="../src/imagenes/logo.jpg" alt="Logo StudentsRepo">  
+            <a href="#" class="logo">StudentRepo</a>
+      <span>STUDENTSREPO</span>
+    </div>
+            
+        <nav class="nav">
+      <a href="#">Inicio</a>
+      <a href="#">Explorar</a>
+      <a href="#">Ayuda</a>
+    </nav>
+        <a href="./Iniciar-sesion.html" class="acceder">Acceder</a>
+
+        <div class="header-content container">
+            <h1 class="titulo">Bienvenido a StudentRepo</h1>
+            <p class="subtitulo">Tu repositorio de recursos estudiantiles</p>
+
+        </div>
+
+    </header>
+    <section class="buscador">
+        <h2>Repositorio Institucional</h2>
+            <input type="text" name="query" placeholder="Buscar por título, autor o materia">
+            <button type="submit">Buscar</button>
+
+    </section>
+    
+</body>
+</html>
