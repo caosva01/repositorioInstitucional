@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,30 +9,43 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
+
 <body>
+     <header>
+    <div class="logo">
+      <img src="../src/imagenes/intento de logo.png" alt="Logo StudentsRepo">  
+    </div>
+
+    <nav class="navbar">
+      <a href="index.html" class="font-medium rounded-lg px-3 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900">Inicio</a>
+      <a href="#"class="font-medium rounded-lg px-3 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900">Repositorio</a>
+      <a href="#"class="font-medium rounded-lg px-3 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900">Nosotros</a>
+      <a href="#"class="font-medium rounded-lg px-3 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900">Ayuda</a>
+    </nav>
+
+    <a href="./Iniciar-sesion.html" class="acceder font-medium rounded-lg px-3 py-2 text-white-700 hover:bg-gray-100 hover:text-gray-900 ">Acceder</a>
+  </header>
     <div class="wrapper">
         <form action="">
-            <h1>Acceder</h1>
+            <h2 class="titulo">Acceder</h2>
             <div class="input-box">
                 <input type="text" placeholder="Usuario" required>
-                <i class='bx  bxs-user'  style='color:#f6f6f8'></i> 
+                <i class='bx  bxs-user' style='color:#f6f6f8'></i>
             </div>
             <div class="input-box">
-                <input type="Contraseña" placeholder="Contraseña" required>
-                <i class='bx  bx-lock' style='color:#f6f6f8' ></i>  
+                <input type="password" placeholder="Contraseña" required>
+                <i class='bx  bx-lock' style='color:#f6f6f8'></i>
 
             </div>
             <div class="remember-forgot">
                 <label><input type="checkbox">Recordar contraseña</label>
-                <a href="#">Olvidaste la contraseña?</a>
+                <a href="../public/olvidaste-contraseña.html">Olvidaste la contraseña?</a>
             </div>
-            <button type="submit" class="btn">Acceder </button>
+            <button type="submit" class="btn">Acceder</button>
 
-            <div class="register-link"> <!--preguntar como se ve mejor -->
-                <p>No tienes cuenta? <a href="#">Registrarse</a></p>
-            </div>
         </form>
 
     </div>
 </body>
+
 </html>
