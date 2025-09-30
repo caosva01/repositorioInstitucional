@@ -1,45 +1,88 @@
-# 📚 StudentsRepo
+# StudentsRepo
 
-Bienvenidos a **StudentsRepo**, un repositorio digital académico creado para centralizar y facilitar el acceso a proyectos, investigaciones y publicaciones de nuestra institución.
+Repositorio institucional para la gestión de proyectos académicos, investigaciones y trabajos de los estudiantes.  
+El sistema cuenta con dos perfiles principales:
 
----
-
-##  ¿Qué es StudentsRepo?
-Es una plataforma web que funciona como repositorio digital, accesible desde computadores o dispositivos móviles con internet.  
-Su propósito es almacenar, organizar y compartir trabajos académicos de la comunidad educativa.
+- **Administrador** → puede registrar, editar y eliminar proyectos desde un panel exclusivo.  
+- **Estudiante** → puede explorar, filtrar y consultar proyectos de manera sencilla.
 
 ---
 
-##  Objetivo
-**Objetivo General:**  
-Centralizar y facilitar el acceso a trabajos académicos, permitiendo a estudiantes y profesores buscar, consultar y compartir información de manera organizada y eficiente.
+## Funcionalidades
 
-**Objetivos Específicos:**
-- Crear un espacio digital para la consulta de proyectos académicos.  
-- Desarrollar un motor de búsqueda con filtros avanzados.  
-- Promover el intercambio de conocimiento dentro de la comunidad.  
-
----
-
-##  Alcance
-- Espacio digital accesible desde cualquier dispositivo con conexión a internet.  
-- Los estudiantes podrán **visualizar y consultar** proyectos.  
-- Los administradores tendrán la opción de **subir documentos** al sistema.  
+- **Login y recuperación de contraseña**.
+- **Visualización de proyectos** con detalle individual.
+- **Formulario de administrador** para registrar proyectos (CRUD básico).
+- **Integración con APIs** (mock y cliente API).
+- **Manejo de datos de prueba** con JSON (`sample-data.json`).
+- **Organización modular** de JavaScript (cada página con su propio script).
+- **Estilos con TailwindCSS** + personalizaciones en `styles.css`.
 
 ---
 
-##  Historias de Usuario
-###  Autenticación
-- **HU 1.1**: Inicio de sesión con correo y contraseña.  
-- **HU 1.2**: Recuperación de contraseña vía correo electrónico.  
-- **HU 1.3**: Bloqueo por intentos fallidos.  
+## Estructura del proyecto
 
-###  Repositorio
-- **HU 2.1**: Lista de proyectos organizados por categorías.  
-- **HU 2.2**: Filtros de búsqueda por título, categoría o palabra clave.  
-- **HU 2.3**: Visualizar detalles de un proyecto y opción de descarga.  
+studentsrepo/
+├── public/ # Páginas visibles
+│ ├── index.html # Página principal
+│ ├── login.html # Login
+│ ├── recover.html # Recuperar contraseña
+│ ├── proyecto.html # Listado de proyectos (vista estudiante)
+│ ├── detalle-proyecto.html # Detalle de un proyecto
+│ ├── admin.html # Panel del administrador
+│ └── ayuda.html # Página de ayuda
+│
+├── src/
+│ ├── main.js # Punto de entrada: detecta página y carga módulo
+│ │
+│ ├── scripts/ # Lógica por página y funcionalidades
+│ │ ├── login.js
+│ │ ├── recover.js
+│ │ ├── proyecto.js
+│ │ ├── detalleProyecto.js
+│ │ ├── admin.js
+│ │ ├── api.js
+│ │ ├── apiClient.js
+│ │ └── database.js
+│ │
+│ ├── assets/
+│ │ ├── data/
+│ │ │ └── sample-data.json # Datos de prueba
+│ │ └── images/ # Logos e imágenes
+│ │
+│ ├── styles/
+│ │ └── styles.css # Estilos personalizados
+│ │
+│ └── utils/
+│ └── domUtils.js # Funciones de ayuda para el DOM
+│
+├── .gitignore # Archivos a ignorar en Git
+├── README.md # Documentación del proyecto
+
 
 ---
 
-##  Estructura del Proyecto
+##  Tecnologías utilizadas
+
+- **HTML5**  
+- **CSS3 + TailwindCSS**  
+- **JavaScript (Vanilla, ES6 Modules)**  
+- **JSON para datos de prueba**  
+- **Git & GitHub para control de versiones**
+
+---
+
+## Equipo de trabajo
+
+- **Mariana** → HTML + CSS + JS de interfaz visual.  
+- **Valentina** → Documentación + apoyo en `api.js` y `recover.js`.  
+- **Viadis** → Integración en `main.js`, conexión con `apiClient.js` y `database.js`, supervisión de `sample-data.json`.  
+
+---
+
+## Notas
+
+- La carpeta `assets/data/` contiene **datos de prueba**.  
+- La carpeta `assets/images/` contiene **imágenes y logos** del sistema.  
+- El archivo `main.js` es el **cerebro central**, que detecta la página actual y carga la lógica correspondiente.  
 
