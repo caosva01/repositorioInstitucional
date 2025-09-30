@@ -26,38 +26,37 @@ studentsrepo/
 ├── public/ # Páginas visibles
 │ ├── index.html # Página principal
 │ ├── login.html # Login
-│ ├── recover.html # Recuperar contraseña
-│ ├── proyecto.html # Listado de proyectos (vista estudiante)
-│ ├── detalle-proyecto.html # Detalle de un proyecto
-│ ├── admin.html # Panel del administrador
-│ └── ayuda.html # Página de ayuda
-│
+├── public/
+│ ├── index.html
+│ ├── login.html
+│ ├── recover-password.html
+│ ├── proyecto.html
+│ ├── detalle-proyecto.html
+│ ├── admin.html
+│ └── ayuda.html
 ├── src/
-│ ├── main.js # Punto de entrada: detecta página y carga módulo
-│ │
-│ ├── scripts/ # Lógica por página y funcionalidades
+│ ├── main.js
+│ ├── assets/
+│ │ ├── data/
+│ │ │ └── sample-data.json
+│ │ └── images/
+│ │ └── foto-login.jpg
+│ ├── scripts/
 │ │ ├── login.js
-│ │ ├── recover.js
+│ │ ├── admin.js
 │ │ ├── proyecto.js
 │ │ ├── detalleProyecto.js
-│ │ ├── admin.js
+│ │ ├── recover.js
 │ │ ├── api.js
 │ │ ├── apiClient.js
 │ │ └── database.js
-│ │
-│ ├── assets/
-│ │ ├── data/
-│ │ │ └── sample-data.json # Datos de prueba
-│ │ └── images/ # Logos e imágenes
-│ │
 │ ├── styles/
-│ │ └── styles.css # Estilos personalizados
-│ │
+│ │ └── styles.css
 │ └── utils/
-│ └── domUtils.js # Funciones de ayuda para el DOM
-│
-├── .gitignore # Archivos a ignorar en Git
-├── README.md # Documentación del proyecto
+│ └── domUtils.js
+├── .gitignore
+├── README.md
+└── info.json
 
 
 ---
