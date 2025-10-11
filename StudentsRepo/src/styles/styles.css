@@ -10,7 +10,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: url('./imagenes/Imagen.jpg') no-repeat center center;
+  background: url('../assets/images/foto\ login.jpg') no-repeat center center;
   background-size: cover;
   min-height: 100vh;
   display: flex;
@@ -81,7 +81,7 @@ header .acceder {
   transition: 0.3s;
 }
 header .acceder:hover {
-  background: #f3f4f6;
+  background: #fefefe;
   color: black;
 }
 
