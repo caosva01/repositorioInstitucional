@@ -10,7 +10,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: url('../assets/images/foto\ login.jpg') no-repeat center center;
+  background: url('../assets/images/marca.png') no-repeat center center;
   background-size: cover;
   min-height: 100vh;
   display: flex;
