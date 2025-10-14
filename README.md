@@ -30,10 +30,10 @@ studentsrepo/
 │ ├── index.html
 │ ├── login.html
 │ ├── recover-password.html
-│ ├── proyecto.html
-│ ├── detalle-proyecto.html
+│ ├── project.html
+│ ├── project-detail.html
 │ ├── admin.html
-│ └── ayuda.html
+│ └── help.html
 ├── src/
 │ ├── main.js
 │ ├── assets/
@@ -44,8 +44,8 @@ studentsrepo/
 │ ├── scripts/
 │ │ ├── login.js
 │ │ ├── admin.js
-│ │ ├── proyecto.js
-│ │ ├── detalleProyecto.js
+│ │ ├── project.js
+│ │ ├── projectDetail.js
 │ │ ├── recover.js
 │ │ ├── api.js
 │ │ ├── apiClient.js

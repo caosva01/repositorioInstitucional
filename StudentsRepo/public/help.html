@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayuda</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* ---------------- BODY ---------------- */
+body {
+  margin: 0;
+  padding: 0;
+  background: url('../assets/images/marca.png') no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #000;
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+  position: relative;
+  height: 83px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+  position: absolute;
+  left: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 230px;
+  height: auto;
+}
+
+.logo-text {
+      font-size: 22px;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+.navbar {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-weight: bold;
+}
+.navbar a:hover {
+  color: rgb(122, 120, 120);
+}
+
+/* Botón Acceder en header */
+header .acceder {
+  position: absolute;
+  right: 40px;
+  padding: 8px 18px;
+  background: #007BFF;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: normal;
+  transition: 0.3s;
+}
+header .acceder:hover {
+  background: #fefefe;
+  color: black;
+}
+    /* ---------------- FORMULARIO ---------------- */
+    form {
+      background: #fff;
+      padding: 50px 55px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      border-radius: 20px;
+      text-align: center;
+      width: 100%;
+      max-width: 420px;
+      margin: 60px auto;
+    }
+
+    form h1 {
+      font-size: 28px;
+      color: #007bff;
+      margin-bottom: 25px;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    label {
+      color: #333;
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    input,
+    textarea {
+      padding: 14px 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      background-color: #f9fafb;
+      border: 2px solid rgba(0, 0, 0, 0.1);
+      color: #333;
+      outline: none;
+      transition: border 0.3s;
+    }
+
+    input:focus,
+    textarea:focus {
+      border: 2px solid #007bff;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #999;
+    }
+
+    .btn {
+      font-size: 16px;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      background-color: #007bff;
+      padding: 12px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 20px;
+      }
+
+      form {
+        width: 100%;
+        padding: 30px 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ---------------- HEADER ---------------- -->
+   <header>
+  <div class="logo">
+    <a href="index.html">
+      <img src="../src/assets/images/intento de logo.png" alt="Logo StudentsRepo">
+    </a>
+  </div>
+
+    <nav class="navbar">
+      <a href="project.html"class="font-medium rounded-lg px-3 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900">Repositorio</a>
+      <a href="#"class="font-medium rounded-lg px-3 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900">Nosotros</a>
+      <a href="help.html"class="font-medium rounded-lg px-3 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900">Ayuda</a>
+    </nav>
+
+    <a href="login.html" class="acceder font-medium rounded-lg px-3 py-2 text-white-700 hover:bg-gray-100 hover:text-gray-900 ">Acceder</a>
+  </header>
+
+  <!-- ---------------- FORMULARIO DE CONTACTO ---------------- -->
+  <form action="https://formsubmit.co/mariasuarez20209@gmail.com" method="POST">
+    <h1>Contáctanos</h1>
+
+    <div class="input-group">
+      <label for="name">Nombre</label>
+      <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+
+      <label for="phone">Teléfono</label>
+      <input type="tel" id="phone" name="phone" placeholder="Tu número" required>
+
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" placeholder="Tu correo" required>
+
+      <label for="message">Mensaje</label>
+      <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+
+      <input class="btn" type="submit" value="Enviar">
+    </div>
+  </form>
+</body>
+</html>
