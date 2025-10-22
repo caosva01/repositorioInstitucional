@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudentsRepo - CESDE</title>
+
+  <!-- Tailwind CSS desde CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fuente moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-sm shadow-md z-50">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <img src="../src/assets/images/intento de logo.png" alt="Logo CESDE" class="w-10 h-10 rounded-full object-cover">
+        <h1 class="text-xl font-bold text-indigo-700">StudentsRepo</h1>
+      </div>
+
+      <nav class="hidden md:flex gap-6 font-medium">
+        <a href="index.html" class="hover:text-indigo-600 transition">Inicio</a>
+        <a href="project.html" class="hover:text-indigo-600 transition">Repositorio</a>
+        <a href="ayuda.html" class="hover:text-indigo-600 transition">Ayuda</a>
+      </nav>
+
+      <button onclick="window.location.href='login.html'"
+              class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition">
+        Acceder
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="pt-28 pb-20 bg-indigo-600 text-white text-center">
+    <h2 class="text-4xl font-bold mb-4">Repositorio Estudiantil CESDE</h2>
+    <p class="max-w-2xl mx-auto text-lg mb-8">
+      Un espacio para compartir proyectos académicos, investigaciones y logros de los estudiantes.
+    </p>
+    <button onclick="window.location.href='project.html'"
+            class="bg-white text-indigo-700 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-100 transition">
+      Explorar proyectos
+    </button>
+  </section>
+
+  <!-- SECCIÓN DE ÁREAS ACADÉMICAS -->
+  <section class="max-w-6xl mx-auto py-16 px-6">
+    <h3 class="text-2xl font-bold text-center text-indigo-700 mb-12">Áreas Académicas</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="p-6 bg-indigo-100 rounded-lg shadow hover:scale-105 transition">
+        <h4 class="text-indigo-800 font-bold mb-2">Desarrollo de Software</h4>
+        <p>Proyectos de programación, apps y soluciones tecnológicas.</p>
+      </div>
+
+      <div class="p-6 bg-green-100 rounded-lg shadow hover:scale-105 transition">
+        <h4 class="text-green-800 font-bold mb-2">Diseño Gráfico</h4>
+        <p>Proyectos visuales, creatividad digital e identidad de marca.</p>
+      </div>
+
+      <div class="p-6 bg-pink-100 rounded-lg shadow hover:scale-105 transition">
+        <h4 class="text-pink-800 font-bold mb-2">Talento Humano</h4>
+        <p>Gestión, liderazgo y desarrollo organizacional.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE INFORMACIÓN -->
+  <section class="bg-gray-100 py-16 px-6">
+    <div class="max-w-5xl mx-auto text-center">
+      <h3 class="text-2xl font-bold text-indigo-700 mb-6">¿Qué es StudentsRepo?</h3>
+      <p class="text-lg text-gray-700 mb-6">
+        StudentsRepo es una plataforma educativa donde los estudiantes del CESDE pueden compartir
+        y consultar proyectos académicos de todas las áreas formativas.
+      </p>
+      <p class="text-gray-600 italic">“El conocimiento se multiplica cuando se comparte.”</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-indigo-700 text-white py-8 text-center">
+    <p>© 2025 StudentsRepo - CESDE</p>
+    <p class="text-sm mt-2">Desarrollado por Valentina Osorno, Mariana Suarez y Viadis Correa.</p>
+  </footer>
+
+  <!-- Script principal -->
+  <script type="module" src="../src/main.js"></script>
+
+</body>
+</html>
