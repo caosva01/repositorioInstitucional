@@ -1,34 +1,18 @@
 
-import {initLogin} from "./scripts/login.js";
-import {initAdmin} from "./scripts/admin.js";
-import {initProyectos} from "./scripts/proyecto.js";
-import {initDetalleProyecto} from "./scripts/detalleProyecto.js";
-import {initRecover} from "./scripts/recover.js";
+import { initLogin } from "./scripts/login.js";
+import { initRecover } from "./scripts/recover.js";
+import { initProjects } from "./scripts/project.js";
+import { initDetailProject } from "./scripts/projectDetail.js";
+import { initAdmin } from "./scripts/admin.js";
 
+const route = window.location.pathname;
 
-const ruta = window.location.pathname;
+if (route.includes("login.html")) initLogin();
+if (route.includes("recover-password.html")) initRecover();
+if (route.includes("project.html")) initProjects();
+if (route.includes("project-detail.html")) initDetailProject();
+if (route.includes("admin.html")) initAdmin();
 
-
-if (ruta.includes("login.html")) {
-  initLogin();
-}
-
-if (ruta.includes("admin.html")) {
-  initAdmin();
-}
-
-if (ruta.includes("proyecto.html")) {
-  initProyectos();
-}
-
-if (ruta.includes("detalle-proyecto.html")) {
-  initDetalleProyecto();
-}
-
-if (ruta.includes("recover-password.html")) {
-  initRecover();
-}
-
-if (ruta.includes("index.html")) {
-  console.log("Bienvenido a StudentsRepo");
+if (route.includes("index.html") || route === "/") {
+  console.log("Bienvenida a StudentsRepo");
 }
