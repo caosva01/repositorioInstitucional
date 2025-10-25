@@ -135,6 +135,48 @@
       font-size: 18px;
       margin-bottom: 20px;
     }
+    /* Filtros */
+   .filtros {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  gap: 4rem; /* separación entre íconos */
+  justify-items: center;
+  align-items: center;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+
+    .filtro {
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 150px;
+    }
+
+    .filtro img {
+      width: 90px;
+      height: 90px;
+      display: block;
+      margin: 0 auto 0.5rem;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    input[type="radio"]:checked + label {
+      transform: scale(1.1);
+      filter: drop-shadow(0 0 8px #007bff);
+    }
+
+    label span {
+      font-size: 0.95rem;
+      color: #333;
+    }
   </style>
 </head>
 <body>
@@ -146,8 +188,9 @@
   </div>
 
     <nav class="navbar">
+      <a href="index.html"class="font-medium rounded-lg px-3 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900">Inicio</a>
       <a href="project.html"class="font-medium rounded-lg px-3 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900">Repositorio</a>
-      <a href="#"class="font-medium rounded-lg px-3 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900">Nosotros</a>
+      <a href="admin.html"class="font-medium rounded-lg px-3 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900">Administrador</a>
       <a href="help.html"class="font-medium rounded-lg px-3 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900">Ayuda</a>
     </nav>
 
@@ -163,9 +206,60 @@ class="flex-1 px-4 py-3 rounded-l-lg border border-gray-300 text-black">
     <button type="submit" class="px-6 py-3 bg-white text-blue-600 font-bold rounded-r-lg hover:bg-blue-700 hover:text-white transition-colors duration-300">Buscar</button>
       </div>
   </section> 
-  <div>
-    
-  </div>   
+
+  <div class="text-center my-10">
+    <button id="btnNewProject"
+            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow transition">
+      Subir Proyecto
+    </button>
+  </div>
   
+<div class="filtros">
+    <input type="radio" name="categoria" id="documento" checked>
+    <label for="documento" class="filtro">
+      <img src="../src/assets/images/iconos/documento.png" alt="Documentos">
+      <span>Por documento</span>
+    </label>
+
+    <input type="radio" name="categoria" id="titulo">
+    <label for="titulo" class="filtro">
+      <img src="../src/assets/images/iconos/libro-abierto.png" alt="Título">
+      <span>Por título</span>
+    </label>
+
+    <input type="radio" name="categoria" id="autor">
+    <label for="autor" class="filtro">
+      <img src="../src/assets/images/iconos/escritor.png" alt="Autor">
+      <span>Por autor</span>
+    </label>
+
+    <input type="radio" name="categoria" id="fecha">
+    <label for="fecha" class="filtro">
+      <img src="../src/assets/images/iconos/calendario.png" alt="Fecha">
+      <span>Por fecha</span>
+    </label>
+
+    <input type="radio" name="categoria" id="materia">
+    <label for="materia" class="filtro">
+      <img src="../src/assets/images/iconos/materias.png" alt="Materia">
+      <span>Por materia</span>
+    </label>
+
+    <input type="radio" name="categoria" id="categoria">
+    <label for="categoria" class="filtro">
+      <img src="../src/assets/images/iconos/categorias.png" alt="categoria">
+      <span>Por categoria</span>
+    </label>
+  </div> <br> <br>
+
+<footer class="bg-blue-600 text-white py-8 text-center">
+    <p>© 2025 StudentsRepo - CESDE</p>
+    <p class="text-sm mt-2">Desarrollado por Valentina Osorno, Mariana Suarez y Viadis Correa.</p>
+  </footer>
+
+  <!--  Script principal -->
+  <script type="module" src="../src/main.js"></script>
 </body>
 </html>
+
+ 
