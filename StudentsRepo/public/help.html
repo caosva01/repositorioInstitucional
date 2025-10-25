@@ -190,7 +190,7 @@ header .acceder:hover {
 
     <a href="login.html" class="acceder font-medium rounded-lg px-3 py-2 text-white-700 hover:bg-gray-100 hover:text-gray-900 ">Acceder</a>
   </header>
-   <section class="pt-28 pb-10 text-center bg-blue-600 text-white">
+   <section class="pt-16 pb-10 text-center bg-blue-600 text-white">
     <h2 class="text-3xl font-bold mb-3">Centro de Ayuda y Soporte</h2>
     <p class="text-lg max-w-2xl mx-auto">Encuentra respuestas a las preguntas más frecuentes y aprende cómo usar StudentsRepo paso a paso.</p>
   </section>
@@ -232,26 +232,29 @@ header .acceder:hover {
   </main>
 
   <!-- ---------------- FORMULARIO DE CONTACTO ---------------- -->
-   <section class="flex justify-center items-center flex-col py-4 -mt-20">
+   <section class="bg-gray-100 py-12 text-center">
 
 
    <form>
     <h1>Contáctanos</h1>
 
     <div class="input-group">
-      <label for="name">Nombre</label>
-      <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+      <label for="name">Nombre Completo</label>
+      <input type="text" placeholder="Tu nombre completo" required
+             class="px-4 py-2 border rounded focus:ring-2 focus:ring-blue-400 outline-none">
 
-      <label for="phone">Teléfono</label>
-      <input type="tel" id="phone" name="phone" placeholder="Tu número" required>
-
-      <label for="email">Correo electrónico</label>
-      <input type="email" id="email" name="email" placeholder="Tu correo" required>
+       <label for="name">Correo electrónico</label>
+      <input type="text" placeholder="Tu correo Institucional" required
+             class="px-4 py-2 border rounded focus:ring-2 focus:ring-blue-400 outline-none">
 
       <label for="message">Mensaje</label>
-      <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+      <textarea placeholder="Escribe tu mensaje aquí..." rows="4"
+                class="px-4 py-2 border rounded focus:ring-2 focus:ring-blue-400 outline-none"></textarea> <br>
 
-      <input class="btn" type="submit" value="Enviar">
+       <button type="submit"
+              class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold">
+        Enviar mensaje
+      </button>
     </div>
 </form>
 </section>
