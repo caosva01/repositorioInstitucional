@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script type="module" src="../src/scripts/project.js"></script>
   <style>
     *{
       margin: 0;
@@ -207,12 +208,44 @@ class="flex-1 px-4 py-3 rounded-l-lg border border-gray-300 text-black">
       </div>
   </section> 
 
-  <div class="text-center my-10">
-    <button id="btnNewProject"
-            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow transition">
-      Subir Proyecto
-    </button>
+  <!-- Botón para abrir el modal -->
+<div class="text-center my-10">
+  <button id="btnNewProject"
+          class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow transition">
+    Subir Proyecto
+  </button>
+</div>
+
+<!-- Modal (formulario oculto al inicio) -->
+<div id="modalNewProject" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+  <div class="bg-white rounded-lg shadow-lg w-11/12 md:w-1/2 p-6 relative">
+    <button id="closeModal" class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-xl">✖</button>
+    
+    <h3 class="text-xl font-bold text-blue-700 mb-4 text-center">Subir nuevo proyecto</h3>
+
+    <form id="newProjectForm" class="flex flex-col gap-4">
+      <input type="text" id="titleInput" placeholder="Título del proyecto" required
+             class="px-4 py-2 border rounded focus:ring-2 focus:ring-blue-400 outline-none">
+      <input type="text" id="authorInput" placeholder="Autor" required
+             class="px-4 py-2 border rounded focus:ring-2 focus:ring-blue-400 outline-none">
+      <select id="areaInput" required
+              class="px-4 py-2 border rounded focus:ring-2 focus:ring-blue-400 outline-none">
+        <option value="">Seleccionar área</option>
+        <option value="software">Desarrollo de Software</option>
+        <option value="diseno">Diseño Gráfico</option>
+        <option value="talento">Talento Humano</option>
+        <option value="mercadeo">Mercadeo</option>
+      </select>
+      <textarea id="descriptionInput" placeholder="Descripción del proyecto" rows="3"
+                class="px-4 py-2 border rounded focus:ring-2 focus:ring-blue-400 outline-none"></textarea>
+      <button type="submit"
+              class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded font-semibold">
+        Guardar proyecto
+      </button>
+    </form>
   </div>
+</div>
+
   
 <div class="filtros">
     <input type="radio" name="categoria" id="documento" checked>
@@ -251,6 +284,14 @@ class="flex-1 px-4 py-3 rounded-l-lg border border-gray-300 text-black">
       <span>Por categoria</span>
     </label>
   </div> <br> <br>
+  <div class="text-center my-10">
+<a href="./project-detail.html"
+            
+  class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow transition">
+            
+     Ver más proyectos
+    </a>
+  </div>
 
 <footer class="bg-blue-600 text-white py-8 text-center">
     <p>© 2025 StudentsRepo - CESDE</p>
@@ -261,5 +302,3 @@ class="flex-1 px-4 py-3 rounded-l-lg border border-gray-300 text-black">
   <script type="module" src="../src/scripts/project.js"></script>
 </body>
 </html>
-
- 
