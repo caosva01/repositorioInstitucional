@@ -257,6 +257,43 @@ class="flex-1 px-4 py-3 rounded-l-lg border border-gray-300 text-black">
   </div>
 </div>
 
+<!-- 🔹 Contenedor de proyectos y detalle -->
+<main class="p-8">
+  <!-- Lista de proyectos -->
+  <section id="projectList" class="grid gap-4 mt-8">
+    <!-- El JS insertará automáticamente las tarjetas de los proyectos -->
+  </section>
+
+  <!-- Detalle del proyecto (oculto por defecto) -->
+  <section id="detalleProyecto" class="hidden mt-8 max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-6">
+    <h2 id="detalleTitulo" class="text-2xl font-bold text-blue-700 mb-2"></h2>
+    <p id="detalleAutor" class="text-gray-700 mb-1"></p>
+    <p id="detalleArea" class="text-gray-700 mb-1"></p>
+    <p id="detalleAno" class="text-gray-700 mb-1"></p>
+    <p id="detalleDescripcion" class="text-gray-600 mb-3"></p>
+
+    <!-- Imagen del proyecto -->
+    <img id="detalleImagen" class="my-4 rounded-lg mx-auto" src="" alt="Imagen del proyecto">
+
+    <!-- Etiquetas dinámicas -->
+    <div id="detalleEtiquetas" class="flex flex-wrap gap-2 mb-4 justify-center"></div>
+
+    <!-- Enlace del proyecto -->
+    <a id="detalleEnlace" href="#" target="_blank"
+       class="text-blue-600 underline hover:text-blue-800 block mb-4 text-center"></a>
+
+    <!-- Botones -->
+    <div class="flex justify-between mt-4">
+      <button id="descargarBtn" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded">
+        Descargar / Ver enlace
+      </button>
+      <button id="volverBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+        Volver al repositorio
+      </button>
+    </div>
+  </section>
+</main>
+
   
 <div class="filtros">
     <input type="radio" name="categoria" id="documento" checked>
@@ -310,6 +347,6 @@ class="flex-1 px-4 py-3 rounded-l-lg border border-gray-300 text-black">
   </footer>
 
   <!--  Script principal -->
-  <script type="module" src="../src/scripts/project.js"></script>
+  <script type="module" src="../src/scripts/main.js"></script>
 </body>
 </html>
